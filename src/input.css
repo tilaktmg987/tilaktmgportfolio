@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+  }
+
+  html {
+    scroll-padding-top: 4rem;
+  }
+
+  @keyframes marquee1 {
+    0% {
+      transform: translateX(300%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-marquee1 {
+    display: inline-block;
+    animation: marquee1 12s linear infinite;
+  }
+}
